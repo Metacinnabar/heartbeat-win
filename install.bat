@@ -29,6 +29,3 @@ echo.
 
 echo Finished!
 pause
-
-
-
