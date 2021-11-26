@@ -6,7 +6,7 @@ An unofficial Windows client for [Heartbeat](https://github.com/technically-func
 
 1. Installation
 
-Download and run the installation batch script, [`install.bat`](https://github.com/Metacinnabar/heartbeat-win/blob/master/install.bat) anywhere you'd like, preferably like so:
+Download and run the installation batch script, [`install.bat`](https://github.com/Metacinnabar/heartbeat-win/blob/master/install.bat), anywhere you'd like, preferably like so:
 ```bash
 curl https://raw.githubusercontent.com/Metacinnabar/heartbeat-win/master/install.bat -o %USERPROFILE%\Downloads
 # then run %USERPROFILE%\Downloads\install.bat as administrator
