@@ -24,7 +24,7 @@ curl -o %root%\client\heartbeat-client-win.ps1 https://raw.githubusercontent.com
 echo.
 
 echo Creating task in task scheduler
-schtasks /CREATE /SC ONSTART /TN heartbeat /TR %root%\client\heartbeat-client-win.ps1
+schtasks /CREATE /SC ONLOGIN /TN heartbeat /TR %root%\client\heartbeat-client-win.ps1
 echo.
 
 echo Finished!
