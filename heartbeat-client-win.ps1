@@ -1,16 +1,34 @@
-while($true)
+# Edit these!!
+$token = "secure heartbeat token here"
+$hostname = "https://hb.metacinna.bar"
+$device = "amazing-pc"
+
+# Setup logging and assembly loading.
+$logdate = Get-Date -Format "yyyy-MM-dd-HH-mm"
+Start-Transcript -path "$home/Documents/heartbeat/logs/$logdate.log" -append
+[void] [System.Reflection.Assembly]::LoadWithPartialName("System.Windows.Forms") 
+
+while ($true)
 {
+    # Assign the value of the curser to a variable.
+    # Wait 60 seconds, and if the value has changed
+    # proceed and ping the host.
+
     $p1 = [System.Windows.Forms.Cursor]::Position
-    Start-Sleep -Seconds 2  # or use a shorter intervall with the -milliseconds parameter
+    Start-Sleep -Seconds 2
     $p2 = [System.Windows.Forms.Cursor]::Position
 
-    if($p1.X -eq $p2.X -and $p1.Y -eq $p2.Y) {
-        echo "mouse didnt move"
-    } else {
+    if ($p1.X -ne $p2.X -or $p1.Y -ne $p2.Y) {
+        # Log date and time.
+        $date = Get-Date
+        echo "$date - Running Heartbeat"
+
+        # Setup auth and device headers.
         $headers = @{
-            'Auth' = ''
-            'Device' = ''
+            'Auth' = $token
+            'Device' = $device
         }
-        Invoke-RestMethod -Uri https://hb.metacinna.bar/api/beat -Method Post -Headers $headers
+        # Powershell equivalent of curl.
+        Invoke-RestMethod -Uri $hostname/api/beat -Method Post -Headers $headers
     }
 }
