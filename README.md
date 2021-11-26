@@ -12,7 +12,7 @@ curl https://raw.githubusercontent.com/Metacinnabar/heartbeat-win/master/install
 # then run %USERPROFILE%\Downloads\install.bat as administrator
 ```
 
-2. Setup config
+2. Configuration
 
 Edit the file at `%USERPROFILE%\Documents\heartbeat\client\heartbeat-client-win.ps1` and input your variables like so:
 ```powershell
