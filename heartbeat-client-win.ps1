@@ -15,7 +15,7 @@ while ($true)
     # proceed and ping the host.
 
     $p1 = [System.Windows.Forms.Cursor]::Position
-    Start-Sleep -Seconds 2
+    Start-Sleep -Seconds 60
     $p2 = [System.Windows.Forms.Cursor]::Position
 
     if ($p1.X -ne $p2.X -or $p1.Y -ne $p2.Y) {
