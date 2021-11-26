@@ -32,3 +32,6 @@ To be sure your script is working and got a response from the server, check the 
 11/26/2021 10:13:20 - Running Heartbeat
 1637921600
 ```
+
+## How it works
+The installation script creates a task in task scheduler that runs the powershell script (as a background process) on login. This script then runs forever in a loop, while recording the mouse position, then waiting a minute, and recording again, and then comparing for change. If there was a detected change in the mouse position it will send a post request to the provided host server, updating the beat.
