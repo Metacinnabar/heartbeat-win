@@ -1,6 +1,6 @@
 # heartbeat-win
 
-This is the Windows client for [Heartbeat](https://github.com/technically-functional/heartbeat). It will ping the central server every minute, as long as the mouse has been moved since last query.
+An unofficial Windows client for [Heartbeat](https://github.com/technically-functional/heartbeat). It will ping the central server every minute, as long as the mouse has been moved since last query.
 
 ## Usage
 
