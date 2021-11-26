@@ -21,7 +21,11 @@ $hostname = "https://hb.metacinna.bar"
 $device = "amazing-pc"
 ```
 
-3. Ensure that the client is setup correctly
+3. Restart your computer
+
+To ensure the script is ran with the correct configuration, restart your computer and it should load on startup.
+
+4. Ensure that the client is setup correctly
 
 To be sure your script is working and got a response from the server, check the logs at `%USERPROFILE%\Documents\heartbeat\logs\` and look for the following:
 ```log
