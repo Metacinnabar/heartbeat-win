@@ -20,7 +20,7 @@ if not exist %root%\logs mkdir %root%\logs
 echo.
 
 echo Downloading heartbeat client.
-curl -o %root%\client\heartbeat-client-win.ps1 https://raw.githubusercontent.com/metacinnabar/heartbeat-wwin/master/heartbeat-client-win.ps1
+curl -o %root%\client\heartbeat-client-win.ps1 https://raw.githubusercontent.com/metacinnabar/heartbeat-win/master/heartbeat-client-win.ps1
 echo.
 
 echo Creating task in task scheduler
