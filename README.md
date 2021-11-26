@@ -21,9 +21,9 @@ $hostname = "https://hb.metacinna.bar"
 $device = "amazing-pc"
 ```
 
-3. Restart your computer
+3. Log out and back in
 
-To ensure the script is ran with the correct configuration, restart your computer and it should load on startup.
+To ensure the script is ran with the correct configuration, log out and back in to trigger the task.
 
 4. Ensure that the client is setup correctly
 
